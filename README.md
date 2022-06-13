@@ -1,33 +1,3 @@
-# cold-banana
-
-## Project setup
-
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-
-```
-npm run build
-```
-
-### Lints and fixes files
-
-```
-npm run lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
 # **Cold Banana Tech Task**
 
 Create a web page in line with one of the designs below, you can choose between a product listing or a location listing template. Both require you to fetch data from an API endpoint and display the data in the response, detailed below.
