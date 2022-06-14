@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="hello container">
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br>
@@ -28,13 +28,29 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
   </div>
+ 
+      <div class="container">{{info}}</div>
+
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  data () {
+    return {
+      info: null
+    }
+  },
+  mounted () {
+    // console.log(this.apiUrl);
+    axios
+      .get(this.apiUrl)
+      .then(response => (this.info = response))
   }
 }
 </script>
