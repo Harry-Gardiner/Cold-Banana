@@ -1,6 +1,10 @@
 <template>
   <section class="products-grid container">
-    <div class="product">P1</div>
+    <ProductCard
+      prodImage="http://dummyimage.com/281x278.png/5fa2dd/ffffff"
+      prodTitle="Lorem Ipsum"
+      prodPrice="12.99"
+    />
     <div class="product">P2</div>
     <div class="product">P3</div>
     <div class="product">P4</div>
@@ -11,10 +15,11 @@
 
 <script>
 import axios from "axios";
+import ProductCard from "./ProductCard.vue";
 
 export default {
   name: "ProductsGrid",
-  components: {},
+  components: { ProductCard },
   data() {
     return {
       data: null,
