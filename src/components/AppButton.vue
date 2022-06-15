@@ -26,7 +26,7 @@ export default {
   color: $white;
   border: none;
   transition: 0.2s ease all;
-  padding: 0 2rem;
+  width: fit-content;
 
   &:hover {
     transform: scale(105%);
@@ -35,11 +35,13 @@ export default {
   &--large {
     font-size: 22px;
     height: 60px;
+    padding: 0 3rem;
   }
 
   &--small {
     font-size: 16px;
     height: 40px;
+    padding: 0.5rem 3rem;
   }
 }
 </style>
