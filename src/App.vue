@@ -1,17 +1,13 @@
 <template>
   <AppNavbar />
-  <AppButton type="button--large">Login</AppButton>
-  <AppButton type="button--small">Read More</AppButton>
 </template>
 
 <script>
 import AppNavbar from "./components/AppNavbar.vue";
-import AppButton from "./components/AppButton";
 export default {
   name: "App",
   components: {
     AppNavbar,
-    AppButton,
   },
 };
 </script>

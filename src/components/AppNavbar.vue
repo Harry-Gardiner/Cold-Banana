@@ -1,42 +1,58 @@
 <template>
-  <nav class="navbar container">
-    <div class="navbar__branding">
-      <h2>Chilled Grape</h2>
-    </div>
-    <ul
-      class="
-        navbar__navigation
-        d-none d-md-flex
-        align-items-center
-        justify-content-end
-      "
-    >
-      <li><a href="/" class="navbar__link">Home</a></li>
-      <li><a href="/" class="navbar__link">About</a></li>
-      <li><a href="/" class="navbar__link">Blog</a></li>
-      <li><a href="/" class="navbar__link">Pricing</a></li>
-    </ul>
-    <div class="navbar__icon d-flex d-md-none">
-      <i
-        class="fa-solid fa-bars"
-        @click="toggleMobileNav"
-        v-bind:class="{ 'icon-active': mobileNav }"
-      ></i>
-    </div>
-    <transition name="mobile-nav">
-      <ul v-show="mobileNav" class="navbar__mobile-nav d-md-none">
+  <header>
+    <img
+      v-bind:src="require('@/assets/images/Vector_min.png')"
+      class="vector vector--two"
+    />
+    <nav class="navbar container">
+      <div class="navbar__branding">
+        <h2>Chilled Grape</h2>
+        <img
+          v-bind:src="require('@/assets/images/Vector_min.png')"
+          class="vector vector--one"
+        />
+      </div>
+      <ul
+        class="
+          navbar__navigation
+          d-none d-md-flex
+          align-items-center
+          justify-content-end
+        "
+      >
         <li><a href="/" class="navbar__link">Home</a></li>
         <li><a href="/" class="navbar__link">About</a></li>
         <li><a href="/" class="navbar__link">Blog</a></li>
         <li><a href="/" class="navbar__link">Pricing</a></li>
+        <AppButton type="button--small">Login</AppButton>
       </ul>
-    </transition>
-  </nav>
+      <div class="navbar__icon d-flex d-md-none">
+        <i
+          class="fa-solid fa-bars"
+          @click="toggleMobileNav"
+          v-bind:class="{ 'icon-active': mobileNav }"
+        ></i>
+      </div>
+      <transition name="mobile-nav">
+        <ul v-show="mobileNav" class="navbar__mobile-nav d-md-none">
+          <li><a href="/" class="navbar__link">Home</a></li>
+          <li><a href="/" class="navbar__link">About</a></li>
+          <li><a href="/" class="navbar__link">Blog</a></li>
+          <li><a href="/" class="navbar__link">Pricing</a></li>
+          <li><a href="/" class="navbar__link">Login</a></li>
+        </ul>
+      </transition>
+    </nav>
+  </header>
 </template>
 
 <script>
+import AppButton from "./AppButton.vue";
 export default {
   name: "AppNavbar",
+  components: {
+    AppButton,
+  },
   data() {
     return {
       mobileNav: false,
@@ -51,6 +67,52 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+header {
+  position: relative;
+
+  .vector {
+    width: 300px;
+    height: 290px;
+
+    @media (min-width: 768px) {
+      width: 566px;
+      height: 450px;
+    }
+
+    position: absolute;
+
+    &--one {
+      top: -180px;
+      left: -30px;
+      transform: rotate(-30deg);
+
+      @media (min-width: 768px) {
+        top: -300px;
+        left: -140px;
+      }
+
+      @media (min-width: 1200px) {
+        top: -180px;
+        left: -150px;
+      }
+    }
+
+    &--two {
+      transform: rotate(-120deg);
+      right: -350px;
+      top: 25vh;
+
+      @media (min-width: 768px) {
+        right: -300px;
+      }
+
+      @media (min-width: 1200px) {
+        right: -200px;
+      }
+    }
+  }
+}
+
 .navbar {
   position: sticky;
   z-index: 99;
@@ -61,6 +123,11 @@ export default {
 
   &__branding {
     text-transform: uppercase;
+    color: $white;
+    h2 {
+      position: relative;
+      z-index: 10;
+    }
   }
 
   ul,
@@ -81,7 +148,7 @@ export default {
 
     i {
       cursor: pointer;
-      font-size: 24px;
+      font-size: 30px;
       transition: 0.8s ease all;
       color: #5b68df;
     }
@@ -111,7 +178,7 @@ export default {
     background: $prim-colour;
     top: 0;
     left: 0;
-    padding-top: 2rem;
+    padding-top: 4rem;
 
     li {
       margin: 1rem 0;
