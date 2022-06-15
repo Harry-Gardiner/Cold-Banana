@@ -1,6 +1,7 @@
 <template>
   <AppNavbar />
-  <AppButton>Login</AppButton>
+  <AppButton type="button--large">Login</AppButton>
+  <AppButton type="button--small">Read More</AppButton>
 </template>
 
 <script>
