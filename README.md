@@ -79,7 +79,9 @@ I used git and GitHub throughout the project. I used the Feature Branch Workflow
 
 ---
 
-Add challenges faced
+### Font Sizing
+
+I decided to use CSS tricks clever approach to fluid typography, see [link](https://css-tricks.com/snippets/css/fluid-typography/). It enables you to set max and min widths as well as max and min font sizes. That way depending on the screen size the font will be auto calculated between its ranges.
 
 ## **Improvements**
 
