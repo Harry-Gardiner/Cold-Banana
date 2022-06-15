@@ -10,6 +10,7 @@
     content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     filename="Image_Blob_min.png"
   />
+  <ProductsGrid />
 </template>
 
 
@@ -17,12 +18,15 @@
 import AppNavbar from "./components/AppNavbar.vue";
 import Hero from "./components/AppHero.vue";
 import ImageWithText from "./components/ImageWithText.vue";
+import ProductsGrid from "./components/ProductsGrid.vue";
+
 export default {
   name: "App",
   components: {
     AppNavbar,
     Hero,
     ImageWithText,
+    ProductsGrid,
   },
 };
 </script>
