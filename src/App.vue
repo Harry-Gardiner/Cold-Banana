@@ -67,6 +67,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 0em;
   margin: 0;
+  color: $heading-colour;
 }
 
 h1 {
