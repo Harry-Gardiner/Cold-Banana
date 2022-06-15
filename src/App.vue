@@ -5,17 +5,24 @@
     <br />
     <h1>dolor sit amet.</h1>
   </Hero>
+  <ImageWithText
+    title="Lorem ipsum dolor sit amet."
+    content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    filename="Image_Blob_min.png"
+  />
 </template>
 
 
 <script>
 import AppNavbar from "./components/AppNavbar.vue";
 import Hero from "./components/AppHero.vue";
+import ImageWithText from "./components/ImageWithText.vue";
 export default {
   name: "App",
   components: {
     AppNavbar,
     Hero,
+    ImageWithText,
   },
 };
 </script>
@@ -60,6 +67,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 0em;
   margin: 0;
+  color: $heading-colour;
 }
 
 h1 {

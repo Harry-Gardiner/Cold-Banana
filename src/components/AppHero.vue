@@ -31,7 +31,7 @@ export default {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 95vh;
   min-height: 400px;
   width: 100%;
 
