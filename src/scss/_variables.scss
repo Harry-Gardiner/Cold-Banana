@@ -4,3 +4,34 @@ $alt-text-colour: #ffffff;
 $price-colour: #747474;
 $prim-colour: linear-gradient(90deg, #73e0a9 0%, #5b68df 100%);
 $shadow: 0px 4px 20px 5px rgba(0, 0, 0, 0.15);
+
+// Font sizes
+$min_h1_width: 320px;
+$max_h1_width: 1440px;
+$min_h1_font: 36px;
+$max_h1_font: 64px;
+
+$min_h2_width: 320px;
+$max_h2_width: 1440px;
+$min_h2_font: 24px;
+$max_h2_font: 36px;
+
+$min_p_width: 320px;
+$max_p_width: 1440px;
+$min_p_font: 16px;
+$max_p_font: 24px;
+
+$min_a_width: 320px;
+$max_a_width: 1440px;
+$min_a_font: 14px;
+$max_a_font: 16px;
+
+$min_afooter_width: 320px;
+$max_afooter_width: 1440px;
+$min_afooter_font: 16px;
+$max_afooter_font: 18px;
+
+$min_aheader_width: 320px;
+$max_aheader_width: 1440px;
+$min_aheader_font: 18px;
+$max_aheader_font: 20px;

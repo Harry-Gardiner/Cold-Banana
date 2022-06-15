@@ -1,9 +1,16 @@
 <template>
   <nav class="navbar container">
     <div class="navbar__branding">
-      <h1>Chilled Grape</h1>
+      <h2>Chilled Grape</h2>
     </div>
-    <ul class="navabr__navigation d-none d-md-flex">
+    <ul
+      class="
+        navbar__navigation
+        d-none d-md-flex
+        align-items-center
+        justify-content-end
+      "
+    >
       <li><a href="/" class="navbar__link">Home</a></li>
       <li><a href="/" class="navbar__link">About</a></li>
       <li><a href="/" class="navbar__link">Blog</a></li>
@@ -11,8 +18,8 @@
     </ul>
     <div class="navbar__icon d-flex d-md-none">
       <i
+        class="fa-solid fa-bars"
         @click="toggleMobileNav"
-        class="fa fa-bars"
         v-bind:class="{ 'icon-active': mobileNav }"
       ></i>
     </div>
@@ -61,6 +68,7 @@ export default {
     font-weight: 500;
     list-style: none;
     text-decoration: none;
+    color: $heading-colour;
   }
 
   &__icon {
@@ -75,6 +83,7 @@ export default {
       cursor: pointer;
       font-size: 24px;
       transition: 0.8s ease all;
+      color: #5b68df;
     }
 
     .icon-active {
@@ -83,7 +92,6 @@ export default {
   }
 
   &__link {
-    font-size: 14px;
     transition: 0.5s ease all;
     padding-bottom: 2px;
     border-bottom: 2px solid transparent;
@@ -126,6 +134,14 @@ export default {
 
   .mobile-nave-enter-to {
     transform: translateX(0);
+  }
+
+  &__navigation {
+    flex: 1;
+
+    li {
+      padding: 0 1rem;
+    }
   }
 }
 </style>
