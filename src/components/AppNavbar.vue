@@ -15,6 +15,7 @@
       <li><a href="/" class="navbar__link">About</a></li>
       <li><a href="/" class="navbar__link">Blog</a></li>
       <li><a href="/" class="navbar__link">Pricing</a></li>
+      <AppButton type="button--small">Login</AppButton>
     </ul>
     <div class="navbar__icon d-flex d-md-none">
       <i
@@ -29,14 +30,19 @@
         <li><a href="/" class="navbar__link">About</a></li>
         <li><a href="/" class="navbar__link">Blog</a></li>
         <li><a href="/" class="navbar__link">Pricing</a></li>
+        <li><a href="/" class="navbar__link">Login</a></li>
       </ul>
     </transition>
   </nav>
 </template>
 
 <script>
+import AppButton from "./AppButton.vue";
 export default {
   name: "AppNavbar",
+  components: {
+    AppButton,
+  },
   data() {
     return {
       mobileNav: false,
