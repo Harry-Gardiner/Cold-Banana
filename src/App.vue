@@ -1,14 +1,16 @@
 <template>
   <AppNavbar />
+  <AppButton>Login</AppButton>
 </template>
 
 <script>
 import AppNavbar from "./components/AppNavbar.vue";
-
+import AppButton from "./components/AppButton";
 export default {
   name: "App",
   components: {
     AppNavbar,
+    AppButton,
   },
 };
 </script>
