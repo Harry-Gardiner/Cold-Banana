@@ -1,13 +1,17 @@
 <template>
   <AppNavbar />
+  <Hero />
 </template>
+
 
 <script>
 import AppNavbar from "./components/AppNavbar.vue";
+import Hero from "./components/AppHero.vue";
 export default {
   name: "App",
   components: {
     AppNavbar,
+    Hero,
   },
 };
 </script>
