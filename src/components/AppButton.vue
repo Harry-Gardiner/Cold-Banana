@@ -19,4 +19,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.button {
+  background: linear-gradient(90deg, #73e0a9 0%, #5b68df 100%);
+  background-size: 110%;
+  border-radius: 100px;
+  color: $white;
+  border: none;
+  transition: 0.2s ease all;
+  padding: 0 2rem;
+
+  &:hover {
+    transform: scale(105%);
+  }
+
+  &--large {
+    font-size: 22px;
+    height: 60px;
+  }
+
+  &--small {
+    font-size: 16px;
+    height: 40px;
+  }
+}
 </style>
