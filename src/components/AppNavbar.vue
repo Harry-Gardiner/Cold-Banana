@@ -130,10 +130,6 @@ header {
     }
   }
 
-  ul {
-    position: relative;
-  }
-
   ul,
   &__link {
     font-weight: 500;
@@ -209,6 +205,7 @@ header {
 
   &__navigation {
     flex: 1;
+    z-index: 50;
 
     li {
       padding: 0 1rem;
