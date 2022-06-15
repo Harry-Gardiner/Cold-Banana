@@ -1,6 +1,10 @@
 <template>
   <AppNavbar />
-  <Hero />
+  <Hero
+    ><h1>Lorem ipsum</h1>
+    <br />
+    <h1>dolor sit amet.</h1>
+  </Hero>
 </template>
 
 
@@ -60,12 +64,12 @@ h6 {
 
 h1 {
   @include fluid-type($min_h1_width, $max_h1_width, $min_h1_font, $max_h1_font);
-  line-height: 96px;
+  // line-height: 96px;
 }
 
 h2 {
   @include fluid-type($min_h2_width, $max_h2_width, $min_h2_font, $max_h2_font);
-  line-height: 54px;
+  // line-height: 54px;
 }
 
 footer {

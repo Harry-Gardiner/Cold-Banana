@@ -130,6 +130,10 @@ header {
     }
   }
 
+  ul {
+    position: relative;
+  }
+
   ul,
   &__link {
     font-weight: 500;
