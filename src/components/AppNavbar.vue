@@ -10,7 +10,11 @@
       <li><a href="/" class="navbar__link">Pricing</a></li>
     </ul>
     <div class="navbar__icon d-flex d-md-none">
-      <i @click="toggleMobileNav" class="fa fa-bars"></i>
+      <i
+        @click="toggleMobileNav"
+        class="fa fa-bars"
+        v-bind:class="{ 'icon-active': mobileNav }"
+      ></i>
     </div>
     <transition name="mobile-nav">
       <ul v-show="mobileNav" class="navbar__mobile-nav d-md-none">
@@ -57,6 +61,25 @@ export default {
     font-weight: 500;
     list-style: none;
     text-decoration: none;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 24px;
+    height: 100%;
+
+    i {
+      cursor: pointer;
+      font-size: 24px;
+      transition: 0.8s ease all;
+    }
+
+    .icon-active {
+      transform: rotate(90deg);
+    }
   }
 
   &__link {

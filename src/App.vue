@@ -3,14 +3,14 @@
 </template>
 
 <script>
-import AppNavbar from './components/AppNavbar.vue'
+import AppNavbar from "./components/AppNavbar.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    AppNavbar
-  }
-}
+    AppNavbar,
+  },
+};
 </script>
 
 <style lang="scss">
@@ -19,6 +19,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: $text-colour;
-  margin-top: 60px;
 }
 </style>
