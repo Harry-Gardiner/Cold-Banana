@@ -81,7 +81,7 @@ I used git and GitHub throughout the project. I used the Feature Branch Workflow
 
 ### Font Sizing
 
-I decided to use CSS tricks clever approach to fluid typography, see [link](https://css-tricks.com/snippets/css/fluid-typography/). It enables you to set max and min widths as well as max and min font sizes. That way depending on the screen size the font will be auto calculated between its ranges.
+I decided to use CSS tricks clever approach to fluid typography, see [link](https://css-tricks.com/snippets/css/fluid-typography/). It enables you to set max and min viewport widths as well as max and min font sizes. That way depending on the screen size the font will be auto calculated between its ranges.
 
 ## **Improvements**
 
@@ -92,3 +92,5 @@ I decided to use CSS tricks clever approach to fluid typography, see [link](http
 ### Styling
 
 ### Component Architecture
+
+Give each component its own directory. This would enable me to store files that are related to a component. Saw this file strucutre when researhcing online and thought thats is a good idea.
