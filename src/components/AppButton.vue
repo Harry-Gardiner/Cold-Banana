@@ -41,7 +41,7 @@ export default {
   &--small {
     font-size: 16px;
     height: 40px;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 4rem;
   }
 }
 </style>
