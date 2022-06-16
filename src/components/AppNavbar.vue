@@ -216,7 +216,7 @@ header {
     z-index: 50;
 
     li {
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
   }
 }
