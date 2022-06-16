@@ -123,10 +123,10 @@ header {
 
   &__branding {
     text-transform: uppercase;
-    color: $white;
     h2 {
       position: relative;
       z-index: 10;
+      color: $white;
     }
   }
 
