@@ -11,6 +11,7 @@
     filename="Image_Blob_min.png"
   />
   <ProductsGrid />
+  <AppFooter />
 </template>
 
 
@@ -19,6 +20,7 @@ import AppNavbar from "./components/AppNavbar.vue";
 import Hero from "./components/AppHero.vue";
 import ImageWithText from "./components/ImageWithText.vue";
 import ProductsGrid from "./components/ProductsGrid.vue";
+import AppFooter from "./components/AppFooter.vue";
 
 export default {
   name: "App",
@@ -27,6 +29,7 @@ export default {
     Hero,
     ImageWithText,
     ProductsGrid,
+    AppFooter,
   },
 };
 </script>
@@ -58,20 +61,19 @@ a {
   line-height: 24px;
   margin: 0;
   @include fluid-type($min_a_width, $max_a_width, $min_a_font, $max_a_font);
+  text-decoration: none;
 }
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
+h3 {
   font-style: normal;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   letter-spacing: 0em;
   margin: 0;
   color: $heading-colour;
+  text-transform: uppercase;
 }
 
 h1 {
@@ -84,21 +86,19 @@ h2 {
   // line-height: 54px;
 }
 
-footer {
-  a {
-    @include fluid-type(
-      $min_afooter_width,
-      $max_afooter_width,
-      $min_afooter_font,
-      $max_afooter_font
-    );
-    font-weight: 400;
-    line-height: 27px;
-  }
+h3 {
+  background: linear-gradient(90.71deg, #73e0a9 0%, #5b68df 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-transform: capitalize;
+  @include fluid-type($min_h3_width, $max_h3_width, $min_h3_font, $max_h3_font);
 }
 
 ul,
 ol {
   margin: 0;
+  list-style: none;
+  padding: 0;
 }
 </style>

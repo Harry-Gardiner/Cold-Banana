@@ -179,6 +179,7 @@ header {
     top: 0;
     left: 0;
     padding-top: 4rem;
+    padding: 2rem;
 
     li {
       margin: 1rem 0;
