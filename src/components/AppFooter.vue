@@ -16,8 +16,8 @@
         </div>
       </div>
       <div class="footer__nav col-12 col-xl-7 mt-4">
-        <div class="row">
-          <div class="col-12 col-md-4 mb-5">
+        <div class="row justify-content-end">
+          <div class="footer__nav__sitemaps col-12 col-md-3 mb-5">
             <h3>Company</h3>
             <ul>
               <li><a href="">About</a></li>
@@ -26,7 +26,7 @@
               <li><a href="">Contact</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-4 mb-5">
+          <div class="footer__nav__sitemaps col-12 col-md-3 mb-5">
             <h3>Products</h3>
             <ul>
               <li><a href="">About</a></li>
@@ -35,9 +35,52 @@
               <li><a href="">Contact</a></li>
             </ul>
           </div>
-          <div class="col-12 col-md-4 mb-5">
+          <div class="col-12 col-md-5 mb-5">
             <h3>Follow Us</h3>
-            Social links
+            <div class="footer__social">
+              <div class="row">
+                <div class="col-12">
+                  <a href="/">
+                    <img
+                      v-bind:src="require('@/assets/images/Group 30.png')"
+                      class="footer__social__icon"
+                    />
+                  </a>
+                  <a href="/">
+                    <img
+                      v-bind:src="require('@/assets/images/Group 29.png')"
+                      class="footer__social__icon"
+                    />
+                  </a>
+                  <a href="/">
+                    <img
+                      v-bind:src="require('@/assets/images/Group 28.png')"
+                      class="footer__social__icon"
+                    />
+                  </a>
+                </div>
+                <div class="col-12">
+                  <a href="/">
+                    <img
+                      v-bind:src="require('@/assets/images/Group 27.png')"
+                      class="footer__social__icon"
+                    />
+                  </a>
+                  <a href="/">
+                    <img
+                      v-bind:src="require('@/assets/images/Group 26.png')"
+                      class="footer__social__icon"
+                    />
+                  </a>
+                  <a href="/">
+                    <img
+                      v-bind:src="require('@/assets/images/Group 31.png')"
+                      class="footer__social__icon"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -78,16 +121,6 @@ export default {
     color: $white;
     position: relative;
 
-    // &::before {
-    //   content: "";
-    //   position: absolute;
-    //   //   left: -200px;
-    //   //   top: -150px;
-    //   width: 500px;
-    //   height: 641px;
-    //   background-image: url("~@/assets/images/large_vector.png?inline");
-    //   background-size: cover;
-    // }
     img {
       width: 800px;
       height: 741px;
@@ -107,9 +140,27 @@ export default {
       position: relative;
       z-index: 10;
     }
+
+    p {
+      @include fluid-type(
+        $min_pfooter_width,
+        $max_pfooter_width,
+        $min_pfooter_font,
+        $max_pfooter_font
+      );
+      line-height: 33px;
+    }
   }
 
   &__nav {
+    .row {
+      text-align: center;
+
+      @media (min-width: 768px) {
+        text-align: start;
+      }
+    }
+
     @media (min-width: 1200px) {
       padding-left: 7rem;
     }
@@ -122,21 +173,35 @@ export default {
       padding: 0.5rem 0;
     }
 
-    a {
-      @include fluid-type(
-        $min_afooter_width,
-        $max_afooter_width,
-        $min_afooter_font,
-        $max_afooter_font
-      );
-      font-weight: 400;
-      line-height: 27px;
-      color: $heading-colour;
-      border-bottom: 2px solid transparent;
+    &__sitemaps {
+      a {
+        @include fluid-type(
+          $min_afooter_width,
+          $max_afooter_width,
+          $min_afooter_font,
+          $max_afooter_font
+        );
+        font-weight: 400;
+        line-height: 27px;
+        color: $heading-colour;
+        border-bottom: 2px solid transparent;
 
+        &:hover {
+          border-color: purple;
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  &__social {
+    &__icon {
+      padding-right: 2rem;
+      padding-bottom: 1rem;
+      transition: 0.3s ease all;
       &:hover {
-        border-color: purple;
-        color: inherit;
+        transform: scale(1.1);
+        border: none;
       }
     }
   }

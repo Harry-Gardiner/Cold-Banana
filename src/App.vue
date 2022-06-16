@@ -92,6 +92,7 @@ h3 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-transform: capitalize;
+  @include fluid-type($min_h3_width, $max_h3_width, $min_h3_font, $max_h3_font);
 }
 
 ul,
