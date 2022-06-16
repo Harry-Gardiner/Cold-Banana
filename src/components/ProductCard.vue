@@ -43,10 +43,12 @@ export default {
     &__title {
       font-weight: bold;
       text-transform: uppercase;
+      font-weight: 700;
     }
 
     &__price {
       color: $price-colour;
+      font-weight: 700;
     }
   }
 }

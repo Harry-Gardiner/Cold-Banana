@@ -87,7 +87,7 @@ header {
       transform: rotate(-30deg);
 
       @media (min-width: 768px) {
-        top: -300px;
+        top: -350px;
         left: -140px;
       }
 
@@ -194,7 +194,6 @@ header {
 
   &__button {
     margin-left: 4rem;
-    font-weight: 600;
   }
 
   .mobile-nav-enter-active,

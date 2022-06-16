@@ -27,6 +27,7 @@ export default {
   border: none;
   transition: 0.2s ease all;
   width: fit-content;
+  font-weight: 600;
 
   &:hover {
     transform: scale(105%);

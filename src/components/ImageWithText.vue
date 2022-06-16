@@ -48,6 +48,10 @@ export default {
     & > * {
       margin-bottom: 2rem;
     }
+
+    h2 {
+      width: 80%;
+    }
   }
 }
 </style>
