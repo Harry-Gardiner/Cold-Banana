@@ -15,7 +15,7 @@
       <ul
         class="
           navbar__navigation
-          d-none d-md-flex
+          d-none d-lg-flex
           align-items-center
           justify-content-end
         "
@@ -24,9 +24,9 @@
         <li><a href="/" class="navbar__link">About</a></li>
         <li><a href="/" class="navbar__link">Blog</a></li>
         <li><a href="/" class="navbar__link">Pricing</a></li>
-        <AppButton type="button--small">Login</AppButton>
+        <AppButton class="navbar__button" type="button--small">Login</AppButton>
       </ul>
-      <div class="navbar__icon d-flex d-md-none">
+      <div class="navbar__icon d-flex d-lg-none">
         <i
           class="fa-solid fa-bars"
           @click="toggleMobileNav"
@@ -34,7 +34,7 @@
         ></i>
       </div>
       <transition name="mobile-nav">
-        <ul v-show="mobileNav" class="navbar__mobile-nav d-md-none">
+        <ul v-show="mobileNav" class="navbar__mobile-nav d-lg-none">
           <li><a href="/" class="navbar__link">Home</a></li>
           <li><a href="/" class="navbar__link">About</a></li>
           <li><a href="/" class="navbar__link">Blog</a></li>
@@ -82,8 +82,8 @@ header {
     position: absolute;
 
     &--one {
-      top: -180px;
-      left: -30px;
+      top: -170px;
+      left: -50px;
       transform: rotate(-30deg);
 
       @media (min-width: 768px) {
@@ -115,6 +115,7 @@ header {
 
 .navbar {
   position: sticky;
+  margin-top: 20px;
   z-index: 99;
   width: 100%;
   top: 0;
@@ -132,7 +133,7 @@ header {
 
   ul,
   &__link {
-    font-weight: 500;
+    font-weight: 600;
     list-style: none;
     text-decoration: none;
     color: $heading-colour;
@@ -178,8 +179,9 @@ header {
     background: $prim-colour;
     top: 0;
     left: 0;
-    padding-top: 4rem;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    z-index: 99;
 
     li {
       margin: 1rem 0;
@@ -188,6 +190,11 @@ header {
         color: $white;
       }
     }
+  }
+
+  &__button {
+    margin-left: 4rem;
+    font-weight: 600;
   }
 
   .mobile-nav-enter-active,
