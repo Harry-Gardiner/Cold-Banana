@@ -14,7 +14,7 @@ export default {
   props: {
     prodImage: String,
     prodTitle: String,
-    prodPrice: String,
+    prodPrice: Number,
   },
 };
 </script>
@@ -26,6 +26,8 @@ export default {
 
   img {
     width: 100%;
+    height: 314px;
+    object-fit: cover;
     border-radius: 30px;
     filter: drop-shadow(0px 8px 20px rgba(0, 0, 0, 0.25));
   }
@@ -35,6 +37,7 @@ export default {
 
     &__title {
       font-weight: bold;
+      text-transform: uppercase;
     }
 
     &__price {

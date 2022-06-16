@@ -20,6 +20,7 @@ Contents:
     - [Testing](#testing)
     - [Styling](#styling)
     - [Component Architecture](#Component-Architecture)
+    - [API Request](#api-request)
 
 ## **Setup**
 
@@ -94,3 +95,7 @@ I decided to use CSS tricks clever approach to fluid typography, see [link](http
 ### Component Architecture
 
 Give each component its own directory. This would enable me to store files that are related to a component. Saw this file strucutre when researhcing online and thought thats is a good idea.
+
+### API Request
+
+With a large data set grabbing all the products in one go could place alot of stress on the clients PC. If the API would allow I would rewrite the axios request to return products in sets of 6. The load more button would then request an additional 8 from the API and append to current data array.
