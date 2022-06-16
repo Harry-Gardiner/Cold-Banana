@@ -35,7 +35,7 @@ export default {
   &--large {
     font-size: 22px;
     height: 60px;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 
   &--small {
