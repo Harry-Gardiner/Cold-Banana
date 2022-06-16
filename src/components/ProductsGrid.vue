@@ -11,6 +11,8 @@
     <div class="product">P5</div>
     <div class="product">P6</div>
   </section>
+  <hr />
+  <div v-for="product in products" v-bind:key="product.id">test</div>
 </template>
 
 <script>
@@ -22,11 +24,16 @@ export default {
   components: { ProductCard },
   data() {
     return {
-      data: null,
+      products: null,
     };
   },
   mounted() {
-    axios.get(this.apiUrl).then((response) => (this.data = response));
+    axios.get(this.apiUrl).then((response) => {
+      // console.log(response);
+      const productsData = response.data[0];
+      // console.log(products);
+      this.products = productsData;
+    });
   },
 };
 </script>

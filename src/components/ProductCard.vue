@@ -12,9 +12,9 @@
 export default {
   name: "ProductCard",
   props: {
-    prodImage: URL,
+    prodImage: String,
     prodTitle: String,
-    prodPrice: Number,
+    prodPrice: String,
   },
 };
 </script>
