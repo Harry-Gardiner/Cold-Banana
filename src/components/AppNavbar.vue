@@ -1,21 +1,21 @@
 <template>
   <header>
     <img
-      v-bind:src="require('@/assets/images/Vector_min.png')"
+      :src="require('@/assets/images/Vector_min.png')"
       class="vector vector--two"
     />
     <nav class="navbar container">
       <div class="navbar__branding">
         <h2>Chilled Grape</h2>
         <img
-          v-bind:src="require('@/assets/images/Vector_min.png')"
+          :src="require('@/assets/images/Vector_min.png')"
           class="vector vector--one"
         />
       </div>
       <ul
         class="
           navbar__navigation
-          d-none d-md-flex
+          d-none d-lg-flex
           align-items-center
           justify-content-end
         "
@@ -24,17 +24,17 @@
         <li><a href="/" class="navbar__link">About</a></li>
         <li><a href="/" class="navbar__link">Blog</a></li>
         <li><a href="/" class="navbar__link">Pricing</a></li>
-        <AppButton type="button--small">Login</AppButton>
+        <AppButton class="navbar__button" type="button--small">Login</AppButton>
       </ul>
-      <div class="navbar__icon d-flex d-md-none">
+      <div class="navbar__icon d-flex d-lg-none">
         <i
           class="fa-solid fa-bars"
           @click="toggleMobileNav"
-          v-bind:class="{ 'icon-active': mobileNav }"
+          :class="{ 'icon-active': mobileNav }"
         ></i>
       </div>
       <transition name="mobile-nav">
-        <ul v-show="mobileNav" class="navbar__mobile-nav d-md-none">
+        <ul v-show="mobileNav" class="navbar__mobile-nav d-lg-none">
           <li><a href="/" class="navbar__link">Home</a></li>
           <li><a href="/" class="navbar__link">About</a></li>
           <li><a href="/" class="navbar__link">Blog</a></li>
@@ -82,12 +82,12 @@ header {
     position: absolute;
 
     &--one {
-      top: -180px;
-      left: -30px;
+      top: -170px;
+      left: -50px;
       transform: rotate(-30deg);
 
       @media (min-width: 768px) {
-        top: -300px;
+        top: -350px;
         left: -140px;
       }
 
@@ -115,6 +115,7 @@ header {
 
 .navbar {
   position: sticky;
+  margin-top: 20px;
   z-index: 99;
   width: 100%;
   top: 0;
@@ -123,16 +124,16 @@ header {
 
   &__branding {
     text-transform: uppercase;
-    color: $white;
     h2 {
       position: relative;
       z-index: 10;
+      color: $white;
     }
   }
 
   ul,
   &__link {
-    font-weight: 500;
+    font-weight: 600;
     list-style: none;
     text-decoration: none;
     color: $heading-colour;
@@ -178,8 +179,9 @@ header {
     background: $prim-colour;
     top: 0;
     left: 0;
-    padding-top: 4rem;
-    padding: 2rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    z-index: 99;
 
     li {
       margin: 1rem 0;
@@ -188,6 +190,10 @@ header {
         color: $white;
       }
     }
+  }
+
+  &__button {
+    margin-left: 4rem;
   }
 
   .mobile-nav-enter-active,
@@ -209,7 +215,7 @@ header {
     z-index: 50;
 
     li {
-      padding: 0 1rem;
+      padding: 0 1.5rem;
     }
   }
 }

@@ -70,7 +70,6 @@ h3 {
   font-style: normal;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  letter-spacing: 0em;
   margin: 0;
   color: $heading-colour;
   text-transform: uppercase;

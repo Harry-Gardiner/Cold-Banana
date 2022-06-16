@@ -1,5 +1,5 @@
 <template>
-  <button @click="consoleClick" v-bind:class="['button', type]">
+  <button @click="consoleClick" :class="['button', type]">
     <slot>Button</slot>
   </button>
 </template>
@@ -27,6 +27,7 @@ export default {
   border: none;
   transition: 0.2s ease all;
   width: fit-content;
+  font-weight: 600;
 
   &:hover {
     transform: scale(105%);
@@ -35,13 +36,13 @@ export default {
   &--large {
     font-size: 22px;
     height: 60px;
-    padding: 0 3rem;
+    padding: 0 4rem;
   }
 
   &--small {
     font-size: 16px;
     height: 40px;
-    padding: 0.5rem 3rem;
+    padding: 0.5rem 4rem;
   }
 }
 </style>

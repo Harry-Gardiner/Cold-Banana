@@ -1,11 +1,11 @@
 <template>
   <section class="container products">
     <div class="products__grid justify-content-center" v-if="dataLoaded">
-      <div v-for="product in productsLoaded" v-bind:key="product.id">
+      <div v-for="product in productsLoaded" :key="product.id">
         <ProductCard
-          v-bind:prodImage="product.image"
-          v-bind:prodTitle="product.product_name"
-          v-bind:prodPrice="product.price"
+          :prodImage="product.image"
+          :prodTitle="product.product_name"
+          :prodPrice="product.price"
         />
       </div>
     </div>
