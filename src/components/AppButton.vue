@@ -1,5 +1,5 @@
 <template>
-  <button @click="consoleClick" v-bind:class="['button', type]">
+  <button @click="consoleClick" :class="['button', type]">
     <slot>Button</slot>
   </button>
 </template>

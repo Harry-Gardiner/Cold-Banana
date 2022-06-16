@@ -4,7 +4,7 @@
       <div class="bg-full col-12 col-xl-5 mb-xl-0">
         <div class="footer__branding">
           <img
-            v-bind:src="require('@/assets/images/Vector_min.png')"
+            :src="require('@/assets/images/Vector_min.png')"
             class="vector vector--one d-none d-xl-flex"
           />
           <h2>Chilled Grape</h2>

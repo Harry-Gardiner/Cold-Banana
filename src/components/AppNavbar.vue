@@ -1,14 +1,14 @@
 <template>
   <header>
     <img
-      v-bind:src="require('@/assets/images/Vector_min.png')"
+      :src="require('@/assets/images/Vector_min.png')"
       class="vector vector--two"
     />
     <nav class="navbar container">
       <div class="navbar__branding">
         <h2>Chilled Grape</h2>
         <img
-          v-bind:src="require('@/assets/images/Vector_min.png')"
+          :src="require('@/assets/images/Vector_min.png')"
           class="vector vector--one"
         />
       </div>
@@ -30,7 +30,7 @@
         <i
           class="fa-solid fa-bars"
           @click="toggleMobileNav"
-          v-bind:class="{ 'icon-active': mobileNav }"
+          :class="{ 'icon-active': mobileNav }"
         ></i>
       </div>
       <transition name="mobile-nav">
