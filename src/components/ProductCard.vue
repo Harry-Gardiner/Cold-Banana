@@ -1,5 +1,11 @@
 <template>
-  <div class="product-card">
+  <div
+    class="product-card"
+    data-aos="zoom-in"
+    data-aos-easing="ease-in-out."
+    data-aos-duration="1500"
+    data-aos-once="false"
+  >
     <img :src="prodImage" alt="" />
     <div class="product-card__content">
       <p class="product-card__content__title">{{ prodTitle }}</p>

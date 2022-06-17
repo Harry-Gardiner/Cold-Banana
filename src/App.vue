@@ -21,6 +21,7 @@ import Hero from "./components/AppHero.vue";
 import ImageWithText from "./components/ImageWithText.vue";
 import ProductsGrid from "./components/ProductsGrid.vue";
 import AppFooter from "./components/AppFooter.vue";
+import AOS from "aos";
 
 export default {
   name: "App",
@@ -30,6 +31,9 @@ export default {
     ImageWithText,
     ProductsGrid,
     AppFooter,
+  },
+  mounted() {
+    AOS.init();
   },
 };
 </script>
