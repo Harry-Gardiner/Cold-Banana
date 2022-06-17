@@ -1,5 +1,10 @@
 <template>
-  <section class="text-and-image container">
+  <section
+    class="text-and-image container"
+    data-aos="fade-up"
+    data-aos-duration="1500"
+    data-aos-once="true"
+  >
     <div class="row d-flex flex-md-row-reverse">
       <div class="col-md-6 text-and-image__img">
         <img :src="require(`@/assets/images/${filename}`)" alt="" />

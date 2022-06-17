@@ -4,7 +4,7 @@
     data-aos="zoom-in"
     data-aos-easing="ease-in-out."
     data-aos-duration="1500"
-    data-aos-once="false"
+    data-aos-once="true"
   >
     <img :src="prodImage" alt="" />
     <div class="product-card__content">
