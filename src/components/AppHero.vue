@@ -9,7 +9,13 @@
       <div class="hero__content__title">
         <slot>Title</slot>
       </div>
-      <div class="hero__content__btn-wrapper">
+      <div
+        class="hero__content__btn-wrapper"
+        data-aos="fade-right"
+        data-aos-duration="1500"
+        data-aos-once="true"
+        data-aos-delay="2000"
+      >
         <AppButton type="button--large">Read More</AppButton>
       </div>
     </div>
